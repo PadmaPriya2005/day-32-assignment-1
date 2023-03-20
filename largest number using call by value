@@ -1,0 +1,34 @@
+#include<stdio.h>
+int input();
+int large(int a, int b, int c);
+void display(int max);
+int main()
+{
+   int num1, num2, num3, largest;
+
+   num1 = input();
+   num2 = input();
+   num3 = input();
+
+   largest = large(num1, num2, num3);
+   display(largest);
+
+   return 0;
+}
+int input()
+{
+   int n;
+   printf("Enter number: ");
+   scanf("%d", &n);
+   return n;
+}
+int large(int a, int b, int c)
+{
+   if(a>=b && a>=c) return a;
+   else if(b>=a && b>=c) return b;
+   else return c;
+}
+void display(int max)
+{
+   printf("Largest number = %d",max);
+}
